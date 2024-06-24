@@ -19,6 +19,10 @@ nunjucks.configure("./views",{
 
 //app.use(bodyParser.urlencoded({extended: true}))
 
+app.get('/:ingoo', (req,res) =>{
+    let name = req.params.ingoo
+    res.send(`<h1>Hello ${name}</h1>`)
+})      //라우터와 미들웨어
 
 app.use('/', express.static("./public"))
 
